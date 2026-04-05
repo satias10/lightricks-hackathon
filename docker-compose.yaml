@@ -2,6 +2,7 @@ version: '3.8'
 services:
   lightricks-finetune:
     image: aeorlov/ados-workspace-cuda13.0:v.0.0.5
+    user: root
     volumes:
       - checkpoints:/mnt/data
     deploy:
