@@ -8,7 +8,9 @@ services:
     volumes:
       - checkpoints:/mnt/data
     command: >
-      /bin/bash -c "pip install uv --break-system-packages && uv pip install jupyterlab --system --break-system-packages && jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --notebook-dir=/mnt/data"  
+      /bin/bash -c "pip install uv --break-system-packages && uv pip install jupyterlab --system
+--break-system-packages && jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+--notebook-dir=/mnt/data --NotebookApp.token='' --NotebookApp.password=''"
     deploy:
       resources:
         reservations:
@@ -17,5 +19,5 @@ services:
               count: all
               capabilities: [gpu]
 
-volumes:
-  checkpoints:
+  volumes:
+    checkpoints:
