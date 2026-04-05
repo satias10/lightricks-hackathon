@@ -8,7 +8,7 @@ services:
     volumes:
       - checkpoints:/mnt/data
     command: >
-      /bin/bash -c "jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --notebook-dir=/mnt/data"
+      /bin/bash -c "pip install jupyterlab && jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --notebook-dir=/mnt/data"
     deploy:
       resources:
         reservations:
