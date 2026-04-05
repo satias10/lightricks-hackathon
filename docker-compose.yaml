@@ -9,7 +9,7 @@ services:
     environment:
       - JUPYTER_TOKEN=lightricks
     command: >
-     /bin/bash -c "jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --notebook-dir=/app"
+     /bin/bash -c "jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --notebook-dir=/mnt/data"
     deploy:
       resources:
         reservations:
